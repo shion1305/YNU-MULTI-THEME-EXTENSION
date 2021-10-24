@@ -206,7 +206,7 @@ async function onButtonClicked() {
         window.alert("過度な更新は避けてください（サーバーへの負荷軽減のため）");
     }
     else {
-        removeTable();
+        removeMarginDiv();
 
         // 履修している講義のIDを取得
         const uniqueLecIds = await fetchLecIds();
@@ -223,9 +223,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function removeTable() {
-    const table = document.querySelector("#homework_list > table");
-    table.remove();
+function removeMarginDiv() {
+    const marginDiv = document.querySelector("#homework_list > .margin_div");
+    marginDiv.remove();
 }
 
 function generateProgressLabel(index, lecNum) {
