@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+#homework_list > table {
+    border: solid 1px #CCCCCC;
+    border-collapse: collapse;
+    margin: 0px 10px 10px 10px;
+    width: calc(100% - 20px);
+}
+
+#homework_list > table > tr:nth-child(odd) td {
+    /* background-color: #f5f5f5 */
+}
+tr.new_table td{
+    border:none !important;
+    border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
+    padding:8px !important;
+}
+tr.new_table > th {
+    text-align: start;
+}
+
+tr.new_table > * {
+    padding: 5px 8px;
+    border-width: 1px 0px;
+    /* border-color: #CCCCCC; */
+    border-style: solid;
+    font-size: 13px;
+}
+
+.margin_div{
+  width:calc(100% - 80px) !important;
+  margin: 20px !important;
+  margin-right:10px !important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+  padding:20px !important;
+}
+.margin_div table{
+  width: 100%;
+}
+
+#homework_list > div > div {
+    margin-bottom: 0px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+#refresh_btn {
+    margin: 2px 7px;
+    padding: 0px 10px;
+}
+
+progress {
+    display: block;
+    margin: 13px auto 5px auto;
+    width: 182px;
+}
+
+.progress_label {
+    text-align: center;
+    margin: 12px 0px;
+}
+
+
+/* ここから自作 */
+
+
+*{
+  /* background-color:	rgba(250,250,250) !important; */
+  background-color:	rgb(53,57,65) !important;
+  border-color: #444 !important;
+  color:#fff !important;
+  font-family: 'Sawarabi Gothic', sans-serif !important;
+  /* font-family: 'Dela Gothic One', cursive !important; */
+}
+/* *{
+  background-color:rgb(54,57,63);
+  color:rgb(220,220,220);
+} */
+#cs_loginInfo{
+  margin-bottom: 20px !important;
+  margin-left: 20px !important;
+  border: none !important;
+}
+#home{
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+#container{
+  padding-top: 20px !important;
+}
+#title{
+  border: none !important;
+}
+#homework_list #main #title{
+  margin:0 10px 0 20px !important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+#main_bk #main #title{
+  margin-right:10px!important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+div#title,div#title h2{
+  background-color:#12172A !important;
+  padding: 8px !important;
+  background-image: none !important;
+  border-radius: 5px;
+}
+#title h2 span{
+  background: #353941 !important;
+  padding:3px 7px;
+  font-size: 80% !important;
+}
+#title h2 span a{
+  text-decoration: none;
+}
+#title h2 span img{
+  display: none !important;
+}
+.cs_formcap{
+  /* 講義一覧のよく分からん説明を消去
+ */
+  display:none !important;
+}
+#main{
+  padding: 0 !important;
+  margin:20px;
+}
+#main_bk{
+  margin-left: 360px !important;
+}
+#cs_rightVox3 .cs_table1:nth-of-type(1) tbody tr td:nth-last-child(-n+2),.cs_table1 tbody tr td:nth-last-child(-n+2) a{
+  /* 通年かどうかと教授の名前を消去 */
+  text-indent: 120% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+.cs_table1{
+  margin: 20px 20px 20px 0 !important;
+  padding:20px !important;
+  padding-right: 50px !important;
+  border:none !important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+.cs_table1 tbody tr td,.cs_table1 tbody tr td a{
+  pointer-events: none !important;
+  transition: .5s !important;
+}
+.cs_table1 tbody tr td a{
+  pointer-events: auto !important;
+}
+.cs_table1 tbody tr:hover td{
+  background-color: rgb(74,77,84) !important;
+  border-bottom:1.5px solid rgba(255, 255, 255, 0) !important;
+}
+.cs_table1 tbody tr:hover a{
+  background-color: rgb(74,77,84) !important;
+}
+.cs_table1 tbody tr td,.cs_table1 tbody tr th{
+  border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+.cs_table1 tbody tr td:nth-child(1){
+  padding: 5px !important;
+}
+.cs_table1 tbody tr td:nth-last-child(3){
+  padding: 10px 0 !important;
+}
+.cs_table1 tbody tr td span{
+  /* 仮登録アイコンを消去 */
+  display: none !important;
+}
+.cs_table1 tbody tr th{
+  /* 曜日の左のborderを消去 */
+  border-left: none !important;
+}
+.cs_table1 a{
+  text-decoration: none;
+  pointer-events: auto;
+}
+#system{
+  /* ヘッダーを消去 */
+  display: none !important;
+}
+/* #center>form{
+  お知らせ欄を消去
+  display: none !important;
+} */
+/* #main_bk{
+  お知らせ欄があった場所の余白を消去
+  margin-left: 0 !important;
+} */
+#side_menu{
+  margin:0 20px !important;
+  padding:10px !important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+#side_menu ul .label{
+  background-image: none !important;
+}
+#side_menu ul li img{
+  display: none !important;
+}
+#cs_mainInfo{
+  border: none !important;
+}
+#cs_mainInfo h3{
+  border-color: white !important;
+}
+/* #cs_mainInfo ul li{
+  pointer-events: none !important;
+  transition: .5s !important;
+}
+#cs_mainInfo ul li:hover,#cs_mainInfo ul li a:hover{
+  background-color: rgb(74,77,84) !important;
+} */
+/* #cs_mainInfo ul li a{
+  text-decoration: none !important;
+  pointer-events: auto !important;
+  transition: .5s !important;
+} */
+#cs_mainInfo img{
+  display: none !important;
+}
+#stage{
+  /* 外枠を消去 */
+  border-left:none !important;
+  border-right: none !important;
+}
+#footer{
+  display: none !important;
+}

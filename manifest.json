@@ -1,0 +1,40 @@
+{
+    "name": "YNU-LMS Extension",
+    "manifest_version": 3,
+    "version": "1.0.1",
+    "description": "YNU-LMS Extension",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": [
+        "https://lms.ynu.ac.jp/lms/homeHoml/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://lms.ynu.ac.jp/lms/homeHoml/"
+            ],
+            "js": ["js/main.js"],
+            "css": ["css/style.css"]
+        },
+        {
+            "matches": [
+                "https://lms.ynu.ac.jp/lms/homeHoml/linkKougi"
+            ],
+            "css": ["css/linkKougi.css"]
+        },
+        {
+            "matches": [
+                "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle"
+            ],
+            "css": ["css/linkKyozaiTitle.css"]
+        },
+        {
+            "matches": [
+                "https://lms.ynu.ac.jp/lms/corsColl/"
+            ],
+            "css": ["css/linkKougi.css"]
+        }
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    }
+}
