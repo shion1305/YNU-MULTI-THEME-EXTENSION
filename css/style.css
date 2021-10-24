@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 #homework_list > table {
     border: solid 1px #CCCCCC;
     border-collapse: collapse;
@@ -7,9 +6,9 @@
     width: calc(100% - 20px);
 }
 
-#homework_list > table > tr:nth-child(odd) td {
-    /* background-color: #f5f5f5 */
-}
+/* #homework_list > table > tr:nth-child(odd) td {
+    background-color: #f5f5f5
+} */
 tr.new_table td{
     border:none !important;
     border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
