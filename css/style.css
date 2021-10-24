@@ -64,44 +64,42 @@ progress {
 
 
 *{
-  /* background-color:	rgba(250,250,250) !important; */
   background-color:	rgb(53,57,65) !important;
-  border-color: #444 !important;
   color:#fff !important;
   font-family: 'Sawarabi Gothic', sans-serif !important;
-  /* font-family: 'Dela Gothic One', cursive !important; */
 }
-/* *{
-  background-color:rgb(54,57,63);
-  color:rgb(220,220,220);
-} */
+#stage{
+  /* 外枠を消去 */
+  border-left:none !important;
+  border-right: none !important;
+}
+
+
+/* ヘッダー部分 */
+#system{
+  /* ヘッダーを消去 */
+  display: none !important;
+}
 #cs_loginInfo{
-  margin-bottom: 20px !important;
-  margin-left: 20px !important;
+  padding: 20px 0 !important;
   border: none !important;
+}
+#cs_loginInfo_left{
+  margin-left: 20px !important;
 }
 #home{
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-}
-#container{
-  padding-top: 20px !important;
-}
-#title{
   border: none !important;
 }
-#homework_list #main #title{
-  margin:0 10px 0 20px !important;
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-}
-#main_bk #main #title{
-  margin-right:10px!important;
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-}
-div#title,div#title h2{
+
+
+/* 未実施の課題及び講義一覧の見出し */
+#title,#title h2{
   background-color:#12172A !important;
   padding: 8px !important;
   background-image: none !important;
   border-radius: 5px;
+  border: none !important;
 }
 #title h2 span{
   background: #353941 !important;
@@ -114,6 +112,17 @@ div#title,div#title h2{
 #title h2 span img{
   display: none !important;
 }
+#homework_list #title{
+  margin:0 10px 0 20px !important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+#main_bk #title{
+  margin-right:10px!important;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+}
+
+
+/* 講義一覧 */
 .cs_formcap{
   /* 講義一覧のよく分からん説明を消去
  */
@@ -174,18 +183,8 @@ div#title,div#title h2{
   text-decoration: none;
   pointer-events: auto;
 }
-#system{
-  /* ヘッダーを消去 */
-  display: none !important;
-}
-/* #center>form{
-  お知らせ欄を消去
-  display: none !important;
-} */
-/* #main_bk{
-  お知らせ欄があった場所の余白を消去
-  margin-left: 0 !important;
-} */
+
+/* お知らせ欄 */
 #side_menu{
   margin:0 20px !important;
   padding:10px !important;
@@ -203,26 +202,11 @@ div#title,div#title h2{
 #cs_mainInfo h3{
   border-color: white !important;
 }
-/* #cs_mainInfo ul li{
-  pointer-events: none !important;
-  transition: .5s !important;
-}
-#cs_mainInfo ul li:hover,#cs_mainInfo ul li a:hover{
-  background-color: rgb(74,77,84) !important;
-} */
-/* #cs_mainInfo ul li a{
-  text-decoration: none !important;
-  pointer-events: auto !important;
-  transition: .5s !important;
-} */
 #cs_mainInfo img{
   display: none !important;
 }
-#stage{
-  /* 外枠を消去 */
-  border-left:none !important;
-  border-right: none !important;
-}
+
+/* フッター */
 #footer{
   display: none !important;
 }
