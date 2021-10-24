@@ -6,9 +6,6 @@
     width: calc(100% - 20px);
 }
 
-/* #homework_list > table > tr:nth-child(odd) td {
-    background-color: #f5f5f5
-} */
 tr.new_table td{
     border:none !important;
     border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
@@ -159,6 +156,8 @@ progress {
 }
 .cs_table1 tbody tr:hover td{
   background-color: rgb(74,77,84) !important;
+}
+.cs_table1:nth-of-type(1) tbody tr:hover td{
   border-bottom:1.5px solid rgba(255, 255, 255, 0) !important;
 }
 .cs_table1 tbody tr:hover a{
@@ -184,6 +183,10 @@ progress {
 .cs_table1 a{
   text-decoration: none;
   pointer-events: auto;
+}
+.cs_table1:nth-of-type(2) td,.cs_table1:nth-of-type(2) th{
+  border: none !important;
+  transition:0s;
 }
 
 /* お知らせ欄 */

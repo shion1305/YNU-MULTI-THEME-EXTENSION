@@ -70,7 +70,7 @@ strong{
   display: none !important;
 }
 #addButton{
-  border-color:white !important;
+  border:1px white solid !important;
 }
 textarea{
   border:none !important;
