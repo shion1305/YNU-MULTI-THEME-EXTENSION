@@ -1,8 +1,8 @@
 {
-    "name": "YNU-LMS Extension",
+    "name": "YNU-LMS Extension Dark-mode",
     "manifest_version": 3,
     "version": "1.0.1",
-    "description": "YNU-LMS dark-mode",
+    "description": "YNU-LMS Extension Dark-mode",
     "permissions": ["storage", "tabs"],
     "host_permissions": [
         "https://lms.ynu.ac.jp/lms/homeHoml/"
