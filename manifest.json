@@ -1,12 +1,9 @@
 {
-    "name": "YNU-LMS Extension Dark-mode",
+    "name": "YNU-LMS Dark-Mode",
+    "short_name":"LMS Dark",
     "manifest_version": 3,
-    "version": "1.0.1",
-    "description": "YNU-LMS Extension Dark-mode",
-    "permissions": ["storage", "tabs"],
-    "host_permissions": [
-        "https://lms.ynu.ac.jp/lms/homeHoml/"
-    ],
+    "version": "1.0.0",
+    "description": "This extension change YNU-LMS's theme to dark",
     "content_scripts": [
         {
             "matches": [

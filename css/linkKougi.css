@@ -98,6 +98,18 @@
 .courseTable1 tbody tr:hover a{
   background-color: rgb(74,77,84) !important;
 }
+td a span{
+  background-image: none !important;
+}
+.cs_taOpen{
+  background-color: #28c3b2 !important;
+}
+.cs_taextend{
+  background-color: #f85d65 !important;
+}
+.cs_taready{
+  background-color: #f5ae02 !important;
+}
 /* お知らせ欄 */
 #side_menu{
   margin:0 20px !important;
@@ -113,6 +125,9 @@
 }
 #side_menu li{
   border:none !important;
+}
+#side_menu #M0028,#side_menu #M0029{
+  border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
 }
 #side_menu a{
   padding:5px 0 5px 16px !important;
