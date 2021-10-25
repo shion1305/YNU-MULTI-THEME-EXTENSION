@@ -1,14 +1,12 @@
 #system{
   display: none !important;
 }
-#cs_fullHeadVox, #cs_top_faseVox{
-  display: none !important;
-}
 *{
   background-color:	rgb(53,57,65) !important;
   color:#fff !important;
   font-family: 'Sawarabi Gothic', sans-serif !important;
 }
+
 #stage{
   /* 外枠を消去 */
   border-left:none !important;
@@ -33,6 +31,13 @@
 #home a{
   text-decoration: none !important;
   pointer-events: auto;
+}
+#repo{
+  background-image: none !important;
+  padding: 0 !important;
+}
+#cs_fullHeadTitle div a img{
+  display: none !important;
 }
 #home:hover{
   background-color: rgb(74,77,84) !important;
