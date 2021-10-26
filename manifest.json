@@ -7,8 +7,21 @@
     "content_scripts": [
         {
             "matches": [
+                "https://lms.ynu.ac.jp/lms/lginLgir/"
+            ],
+            "css": ["css/linkKougi.css"]
+        },
+        {
+            "matches": [
+                "https://lms.ynu.ac.jp/lms/error/notLogin"
+            ],
+            "css": ["css/linkKougi.css"]
+        },
+        {
+            "matches": [
                 "https://lms.ynu.ac.jp/lms/homeHoml/"
             ],
+            "js": ["js/main.js"],
             "css": ["css/style.css"]
         },
         {
