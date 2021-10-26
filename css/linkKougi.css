@@ -126,7 +126,7 @@ td a span{
 #side_menu li{
   border:none !important;
 }
-#side_menu #M0028,#side_menu #M0029{
+#side_menu #M0028,#side_menu #M0029,#side_menu #M0039,#side_menu #M0041{
   border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
 }
 #side_menu a{
