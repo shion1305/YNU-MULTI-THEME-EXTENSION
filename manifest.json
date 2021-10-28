@@ -24,7 +24,6 @@
                 "https://lms.ynu.ac.jp/lms/homeHoml/",
                 "https://lms.ynu.ac.jp/lms/infrInfr/back"
             ],
-            "js": ["js/main.js"],
             "css": ["css/style.css"]
         },
         {
@@ -43,8 +42,5 @@
             ],
             "css": ["css/linkKougi.css"]
         }
-    ],
-    "background": {
-        "service_worker": "js/background.js"
-    }
+    ]
 }
