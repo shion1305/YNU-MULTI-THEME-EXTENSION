@@ -3,7 +3,6 @@
     "manifest_version": 3,
     "version": "1.0.1",
     "description": "This extension change YNU-LMS's theme to dark",
-    "permissions": ["storage", "tabs"],
     "host_permissions": [
         "https://lms.ynu.ac.jp/lms/homeHoml/"
     ],
@@ -30,7 +29,9 @@
         },
         {
             "matches": [
-                "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle"
+                "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle*",
+                "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle?kyozaiId=REP0000000814311&kyozaiSyCdHidden=.*",
+                "https://lms.ynu.ac.jp/lms/rptsRptc/"
             ],
             "css": ["css/linkKyozaiTitle.css"]
         },

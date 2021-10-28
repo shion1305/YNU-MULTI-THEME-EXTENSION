@@ -1,124 +1,124 @@
-// ヘッダーは最初から表示
+const STORAGE_KEY = 'info';
+
 injectHeader();
 
 // メイン処理
 (async () => {
-    const cachedData = await getFromStorage();
-    console.log(cachedData);
-    // storage にデータが格納されている場合
-    if (Object.keys(cachedData).length > 10) {
-        const homeworks = cachedData.homeworks;
-        injectTable(homeworks);
+  const cachedData = getFromStorage();
+  const todayFiveClock = new Date().setHours(5, 0, 0, 0);
+  if (cachedData && cachedData.unixTime > todayFiveClock) {
+    const homeworks = cachedData.homeworks;
+    injectTable(homeworks);
+  }
+  else {
+    let homeworks = [];
+    let infoId = '';
+    let infoText = '';
+    //お知らせのID(提出期限通知の内最新のもの)を取得
+    infoId = await getInfoId();
+    //提出期限通知のDOMとテキストを取得
+    if(!infoId){
+      injectTable(homeworks);
+      saveToStorage(homeworks);
+    }else{
+      infoText = await getInfoText(infoId);
+      console.log(infoText);
+      //ここでテキストから宿題の情報に変換するメソッドを設定。
+      homeworks = arrangeToHomeworks(infoText);
+      console.log(homeworks);
+      injectTable(homeworks);
+      saveToStorage(homeworks);
     }
-    else {
-        let homeworks = [];
-        let infoId = '';
-        //お知らせのID(提出期限通知の内最新のもの)を取得
-        infoId = await getInfoId();
-        //提出期限通知のDOMとテキストを取得
-        const infoText = await getInfoText(infoId);
-        //ここでテキストから宿題の情報に変換するメソッドを設定。
-        homeworks = arrangeToHomeworks(infoText);
-        console.log(homeworks);
-        injectTable(homeworks);
-        saveToStorage(homeworks);
-    }
+  }
 })();
 
 class Homework {
-    constructor(title, lecName, deadline, anchor) {
-        this.title = title;
-        this.lecName = lecName;
-        this.deadline = deadline;
-        this.anchor = anchor;
-    }
+  constructor(title, lecName, deadline, anchor) {
+    this.title = title;
+    this.lecName = lecName;
+    this.deadline = deadline;
+    this.anchor = anchor;
+  }
 }
-
 function injectHeader() {
-    const upperElement = document.querySelector("#cs_loginInfo");
+  const upperElement = document.querySelector("#cs_loginInfo");
 
-    // ヘッダーの親要素を追加
-    const parent = document.createElement("div");
-    parent.id = "homework_list";
-    upperElement.after(parent);
+  // ヘッダーの親要素を追加
+  const parent = document.createElement("div");
+  parent.id = "homework_list";
+  upperElement.after(parent);
 
-    // 「未実施の課題」を表示
-    const header = document.createElement("div");
-    header.id = "main";
-    header.style.marginLeft = "3px";
-    header.innerHTML = `<div id="title"> <h2>提出期限課題</h2> </div>`;
+  // 「未実施の課題」を表示
+  const header = document.createElement("div");
+  header.id = "main";
+  header.style.marginLeft = "3px";
+  header.innerHTML = `<div id="title"> <h2>提出期限課題</h2> </div>`;
 
-    const marginDiv = document.createElement("div");
-    marginDiv.className = "margin_div";
+  const marginDiv = document.createElement("div");
+  marginDiv.className = "margin_div";
 
-    parent.appendChild(header);
-    header.after(marginDiv);
+  parent.appendChild(header);
+  header.after(marginDiv);
 }
 
-async function getFromStorage() {
-    return new Promise(resolve => {
-        chrome.storage.local.get((data) => {resolve(data)});
-    });
+function getFromStorage() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY));
 }
 
 function saveToStorage(homeworks) {
-    const unixTime = Date.now() / 1000;
-    const data = {
-        "homeworks": homeworks,
-        "unixTime": unixTime
-    };
-
-    chrome.storage.local.set(data, function() {});
+  const unixTime = Date.now();
+  const data = {
+      "homeworks": homeworks,
+      "unixTime": unixTime
+  };
+  const jsonData = JSON.stringify(data);
+  localStorage.setItem(STORAGE_KEY, jsonData);
 }
 function injectTable(homeworks) {
-    const parent = document.querySelector("#homework_list");
-    const newTable = document.createElement("table");
+  const parent = document.querySelector("#homework_list");
+  const newTable = document.createElement("table");
+  const tr = document.createElement("tr");
+  tr.className = "new_table";
+
+  newTable.appendChild(tr);
+
+  if (homeworks.length == 0) {
     const tr = document.createElement("tr");
     tr.className = "new_table";
 
+    const td = document.createElement("td");
+    td.innerText = "課題はありません";
+
+    tr.appendChild(td);
     newTable.appendChild(tr);
+  }
+  else {
+    for (const hw of homeworks) {
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td");
+      const td2 = document.createElement("td");
+      const td3 = document.createElement("td");
 
-    if (homeworks.length == 0) {
-        const tr = document.createElement("tr");
-        tr.className = "new_table";
+      const td1a = document.createElement("a");
 
-        const td = document.createElement("td");
-        td.innerText = "課題はありません";
+      td1a.innerText = hw.title;
+      td1a.setAttribute("href","https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle?kyozaiId=" + hw.anchor + "&kyozaiSyCdHidden=02");
+      td2.innerText = hw.lecName;
+      td3.innerText = hw.deadline;
 
-        tr.appendChild(td);
-        newTable.appendChild(tr);
+      td1.appendChild(td1a);
+
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+
+      tr.className = "new_table";
+      newTable.appendChild(tr);
     }
-    else {
-        for (const hw of homeworks) {
-            const tr = document.createElement("tr");
-            const td1 = document.createElement("td");
-            const td2 = document.createElement("td");
-            const td3 = document.createElement("td");
-
-            const td1a = document.createElement("a");
-
-            td1a.innerText = hw.title;
-            td1a.setAttribute("href","https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle?kyozaiId=" + hw.anchor + "&kyozaiSyCdHidden=02");
-            td2.innerText = hw.lecName;
-            td3.innerText = hw.deadline;
-
-            td1.appendChild(td1a);
-
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-
-            tr.className = "new_table";
-            newTable.appendChild(tr);
-        }
-    }
-
-    // const marginDiv = document.createElement("div");
-    // marginDiv.className = "margin_div";
-    const marginDiv = document.getElementsByClassName("margin_div")[0];
-    marginDiv.appendChild(newTable);
-    parent.appendChild(marginDiv);
-
+  }
+  const marginDiv = document.getElementsByClassName("margin_div")[0];
+  marginDiv.appendChild(newTable);
+  parent.appendChild(marginDiv);
 }
 
 async function getInfoId(){
@@ -127,42 +127,40 @@ async function getInfoId(){
   const homeHtmlString = await homeResponse.text();
   const parser = new DOMParser();
   const homeDocument = parser.parseFromString(homeHtmlString, "text/html");
-  // const b = document.getElementById("cs_mainInfo").getElementsByTagName("ul").getAttribute("id");
   const infoAnchorTags = homeDocument.getElementById("cs_mainInfo").getElementsByTagName("ul")[1].getElementsByTagName("a");
-  // for(const tag of infoAnchorTags){
-  //   if(tag.innerText.includes("レポート提出期限通知")){
-  //     const onclick = tag.getAttributeNode("onclick");
-  //         // "formSubmit(<講義ID>)" から<講義ID> のみを抽出
-  //         var infoId = onclick.value.match(/'([^"]+)'/)[1].slice(0,16);
-  //         // console.log(infoId);
-  //         const newInfoId = infoId;
-  //         return newInfoId;
-  //   }
-  // }
-  return 'INF0000007120924';
+  for(const tag of infoAnchorTags){
+    if(tag.innerText.includes("レポート提出期限通知")){
+      const onclick = tag.getAttributeNode("onclick");
+          // "formSubmit(<講義ID>)" から<講義ID> のみを抽出
+          var infoId = onclick.value.match(/'([^"]+)'/)[1].slice(0,16);
+          // console.log(infoId);
+          const newInfoId = infoId;
+          return newInfoId;
+    }
+  }
+  // return 'INF0000007120924';
 }
 async function getInfoText(infoId){
   if(!infoId){
     return;
   }else{
-          const infoUrl = "https://lms.ynu.ac.jp/lms/infrInfr/index?infId=" + infoId + "&infType=03";
-          const infoResponse = await fetch(infoUrl);
-          const infoHtmlString = await infoResponse.text();
-          const parser = new DOMParser();
-          const infoDocument = parser.parseFromString(infoHtmlString, "text/html");
-          const infoTrText = infoDocument.getElementById("cs_centerinVox").getElementsByClassName("cs_table3a")[0].getElementsByTagName("tr")[4].innerHTML;
-          var div = document.createElement('div');
-          div.style.display = 'none';
-          div.innerHTML = infoTrText; //html要素に変換
-          div.id = 'infoTrText';
-          document.body.appendChild(div); //bodyに追加
-          const infoBoldText = document.getElementById("infoTrText").getElementsByTagName("b")[0].innerText;
-          const infoBoldHtml = document.getElementById("infoTrText").getElementsByTagName("b")[0].innerHTML;
-          // console.log(infoBoldText);
-          document.body.removeChild(div); //bodyから削除
-          const infoText = [infoBoldText,infoBoldHtml];
-          return infoText;
-        }
+    const infoUrl = "https://lms.ynu.ac.jp/lms/infrInfr/index?infId=" + infoId + "&infType=03";
+    const infoResponse = await fetch(infoUrl);
+    const infoHtmlString = await infoResponse.text();
+    const parser = new DOMParser();
+    const infoDocument = parser.parseFromString(infoHtmlString, "text/html");
+    const infoTrText = infoDocument.getElementById("cs_centerinVox").getElementsByClassName("cs_table3a")[0].getElementsByTagName("tr")[4].innerHTML;
+    var div = document.createElement('div');
+    div.style.display = 'none';
+    div.innerHTML = infoTrText; //html要素に変換
+    div.id = 'infoTrText';
+    document.body.appendChild(div); //bodyに追加
+    const infoBoldText = document.getElementById("infoTrText").getElementsByTagName("b")[0].innerText;
+    const infoBoldHtml = document.getElementById("infoTrText").getElementsByTagName("b")[0].innerHTML;
+    document.body.removeChild(div); //bodyから削除
+    const infoText = [infoBoldText,infoBoldHtml];
+    return infoText;
+  }
 }
 function arrangeToHomeworks(infoText){
   const homeworks = [];

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 #homework_list  table {
     border-collapse: collapse;
-    width: calc(100% - 20px);
 }
 tr.new_table td{
     border:none !important;
