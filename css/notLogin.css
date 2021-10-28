@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+*{
+  background-color:	rgb(53,57,65) !important;
+  color:#fff !important;
+  font-family: 'Sawarabi Gothic', sans-serif !important;
+}
+#stage{
+  /* 外枠を消去 */
+  border-left:none !important;
+  border-right: none !important;
+}
+#system{
+  display: none !important;
+}
+#cs_loginInfo{
+  padding: 20px 0 !important;
+  border: none !important;
+}
+#cs_loginInfo_left{
+  margin-left: 20px !important;
+}
+#addMess4{
+  border: none !important;
+}
+#addMess4 p{
+  display: none !important;
+}
+input{
+  width:300px !important;
+  height: 100px !important;
+  border: 2px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  border-radius: 10px;
+}
+#footer{
+  display: none !important;
+}
