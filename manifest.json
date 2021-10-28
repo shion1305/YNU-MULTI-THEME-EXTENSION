@@ -11,13 +11,13 @@
             "matches": [
                 "https://lms.ynu.ac.jp/lms/lginLgir/"
             ],
-            "css": ["css/linkKougi.css"]
+            "css": ["css/lginLgir.css"]
         },
         {
             "matches": [
                 "https://lms.ynu.ac.jp/lms/error/notLogin"
             ],
-            "css": ["css/linkKougi.css"]
+            "css": ["css/notLogin.css"]
         },
         {
             "matches": [
