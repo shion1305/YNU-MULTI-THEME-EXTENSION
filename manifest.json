@@ -24,7 +24,8 @@
                 "https://lms.ynu.ac.jp/lms/homeHoml/",
                 "https://lms.ynu.ac.jp/lms/infrInfr/back"
             ],
-            "css": ["css/style.css"]
+            "css": ["css/style.css"],
+            "js": ["js/main.js"]
         },
         {
             "matches": [
@@ -36,9 +37,9 @@
         },
         {
             "matches": [
-              "https://lms.ynu.ac.jp/lms/homeHoml/linkKougi",
-              "https://lms.ynu.ac.jp/lms/corsColl/",
-              "https://lms.ynu.ac.jp/lms/infrInfr/.*"
+                "https://lms.ynu.ac.jp/lms/homeHoml/linkKougi",
+                "https://lms.ynu.ac.jp/lms/corsColl/",
+                "https://lms.ynu.ac.jp/lms/infrInfr/.*"
             ],
             "css": ["css/linkKougi.css"]
         }
