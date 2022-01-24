@@ -143,3 +143,30 @@ td a span{
 #footer{
   display: none !important;
 }
+
+/* 成績参照 */
+#rating_block td, #rating_block th{
+  border:1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+#list_form td img{
+  display: none;
+}
+#list_form td, #list_form th{
+  border:1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* シラバス */
+.cs_h301{
+  border: none !important;
+}
+.yellow{
+  border: none !important;
+}
+.cs_h301 + table td, .cs_h301 + table th{
+  border:1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 掲示板 */
+.box04 img{
+  display: none;
+}

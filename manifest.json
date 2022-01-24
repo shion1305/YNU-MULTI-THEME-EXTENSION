@@ -31,7 +31,15 @@
             "matches": [
                 "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle*",
                 "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiTitle?kyozaiId=REP0000000814311&kyozaiSyCdHidden=.*",
-                "https://lms.ynu.ac.jp/lms/rptsRptc/"
+                "https://lms.ynu.ac.jp/lms/rptsRptc/",
+                "https://lms.ynu.ac.jp/lms/rptsHisr/displayReport",
+                "https://lms.ynu.ac.jp/lms/rptsRptc/entryReport",
+                "https://lms.ynu.ac.jp/lms/corsColl/linkKyozaiJisshi",
+                "https://lms.ynu.ac.jp/lms/tstsResr/index",
+                "https://lms.ynu.ac.jp/lms/tstsResr/rireki",
+                "https://lms.ynu.ac.jp/lms/tstsResr/link",
+                "https://lms.ynu.ac.jp/lms/tstsExpr/rireki",
+                "https://lms.ynu.ac.jp/lms/tstsResr/link"
             ],
             "css": ["css/linkKyozaiTitle.css"]
         },
@@ -39,9 +47,24 @@
             "matches": [
                 "https://lms.ynu.ac.jp/lms/homeHoml/linkKougi",
                 "https://lms.ynu.ac.jp/lms/corsColl/",
-                "https://lms.ynu.ac.jp/lms/infrInfr/.*"
+                "https://lms.ynu.ac.jp/lms/infrInfr/.*",
+                "https://lms.ynu.ac.jp/lms/evasEvlr/",
+                "https://lms.ynu.ac.jp/lms/slbsSlbr/",
+                "https://lms.ynu.ac.jp/lms/bbscThml/",
+                "https://lms.ynu.ac.jp/lms/faqlFaql/",
+                "https://lms.ynu.ac.jp/lms/qaasQaal/",
+                "https://lms.ynu.ac.jp/lms/lnrsEvlr/",
+                "https://lms.ynu.ac.jp/lms/quesQuec/entryEnquete",
+                "https://lms.ynu.ac.jp/lms/rptsHisr/backToKyozai",
+                "https://lms.ynu.ac.jp/lms/rptsCmpr/backToKyozai",
+                "https://lms.ynu.ac.jp/lms/.*/backToKyozai",
+                "https://lms.ynu.ac.jp/lms/.*/kyozaiBack",
+                "https://lms.ynu.ac.jp/lms/tstsHisl/kyozaiBack",
+                "https://lms.ynu.ac.jp/lms/tstsExpr/kyozaiBack"
             ],
-            "css": ["css/linkKougi.css"]
+            "css": ["css/linkKougi.css"],
+            "js": ["js/main.js"]
+            
         }
     ]
 }

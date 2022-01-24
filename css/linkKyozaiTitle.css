@@ -139,3 +139,8 @@ textarea:focus{
 #footer{
   display: none !important;
 }
+
+/* テスト */
+.testControlCenter{
+  background-image: none !important;
+}

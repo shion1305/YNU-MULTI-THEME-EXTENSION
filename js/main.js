@@ -8,5 +8,8 @@ function omit() {
     if (elt.innerText.includes("【連絡専用】")) {
       elt.innerText = elt.innerText.split("【連絡専用】")[1];
     }
+    if (elt.innerText.includes("実施済み")) {
+      elt.innerText = "実施";
+    }
   }
 }

@@ -1,26 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 #homework_list  table {
     border-collapse: collapse;
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px !important;
+    border: none;
 }
 tr.new_table td{
     border:none !important;
     padding:12px !important;
 }
-tr.new_table:nth-last-child(n+2) td{
+tr.new_table th, tr.new_table td{
+  border: none;
   border-bottom:1.8px solid rgba(255, 255, 255, 0.1) !important;
+}
+tr.new_table th{
+  padding-top: 20px !important;
 }
 tr.new_table > * {
     padding: 5px 8px;
-    border-width: 1px 0px;
-    /* border-color: #CCCCCC; */
-    border-style: solid;
     font-size: 13px;
 }
 
 .margin_div{
   width:calc(100% - 100px) !important;
   margin: 20px !important;
-  /* margin-right:10px !important; */
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
   padding:10px 30px !important;
 }
@@ -108,12 +112,27 @@ progress {
   background: #353941 !important;
   padding:3px 7px;
   font-size: 80% !important;
+  pointer-events: none;
+  transition: .3s;
+}
+#title h2 span:hover{
+  background-color: rgb(74,77,84) !important;
 }
 #title h2 span a{
   text-decoration: none;
+  pointer-events: auto;
 }
 #title h2 span img{
   display: none !important;
+}
+#title button{
+  border: none !important;
+  width: 7% !important;
+  cursor: pointer;
+  transition: .3s;
+}
+#title button:hover{
+  background-color: rgb(74,77,84) !important;
 }
 #homework_list #title{
   margin:0 0 0 20px !important;
@@ -217,7 +236,10 @@ progress {
   transition: .3s;
   border-radius: 5px;
 }
-#side_menu ul li:hover,#side_menu ul li:hover a{
+#side_menu ul li span{
+  transition: .3s;
+}
+#side_menu ul li:hover,#side_menu ul li:hover a,#side_menu ul li:hover span{
   background-color: rgb(74,77,84) !important;
 }
 #side_menu ul li a{
