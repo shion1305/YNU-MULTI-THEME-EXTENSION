@@ -98,17 +98,42 @@
 .courseTable1 tbody tr:hover a{
   background-color: rgb(74,77,84) !important;
 }
-td a span{
+td span{
   background-image: none !important;
 }
 .cs_taOpen{
-  background-color: #28c3b2 !important;
+  background-color: #fff !important;
+  color: #353941 !important;
 }
 .cs_taextend{
   background-color: #f85d65 !important;
 }
-.cs_taready{
+.state-background{
+  display: inline-block;
+  width: 65px !important;
+  padding: 0.5em 0;
+  font-size: .8em;
+  transition: .5s;
+  pointer-events: none;
+  text-shadow: 0 0 10px #555;
+}
+.state-background:hover{
+  opacity: 0.7;
+}
+.state-background:hover .link{
+  background-color: #28c3b2 !important;
+}
+.yet{
+  background-color: #f85d65 !important;
+}
+.already{
+  background-color: #28c3b2 !important;
+}
+.unwatched{
   background-color: #f5ae02 !important;
+}
+.link{
+  pointer-events: auto;
 }
 /* お知らせ欄 */
 #side_menu{

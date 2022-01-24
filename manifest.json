@@ -63,7 +63,10 @@
                 "https://lms.ynu.ac.jp/lms/tstsExpr/kyozaiBack"
             ],
             "css": ["css/linkKougi.css"],
-            "js": ["js/main.js"]
+            "js": [
+                "js/main.js",
+                "js/linkKougi.js"
+            ]
             
         }
     ]

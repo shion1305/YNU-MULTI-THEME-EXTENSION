@@ -11,6 +11,9 @@
 }
 
 
+#center{
+  background-image: none !important;
+}
 /* ヘッダー部分 */
 #system{
   /* ヘッダーを消去 */
@@ -46,6 +49,9 @@ img{
 .label{
   background-image: none !important;
 }
+#side_menu{
+  margin: 0 auto !important;
+}
 #side_menu .label{
   text-align: center;
 }
@@ -57,4 +63,7 @@ img{
 }
 #cs_login table{
   margin: 0 auto !important;
+}
+#main_bk{
+  display: none;
 }
