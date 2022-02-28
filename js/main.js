@@ -28,7 +28,7 @@ function showTodayLecture() {
   const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][unix_time.getDay()] + "曜日";
 
   for(const dayBox of dayBoxes) {
-    if(dayBox.childNodes[1] && dayBox.childNodes[1].innerText.slice(-3) == dayOfWeek) {
+    if(dayBox.childNodes[1] && dayBox.childNodes[1].innerText.slice(-3) == dayOfWeek + 2) {
       dayBox.childNodes[1].innerText = " 今日の講義 (" + dayBox.childNodes[1].innerText + " )";
       dayBoxes[0].before(dayBox);
     }
@@ -37,7 +37,7 @@ function showTodayLecture() {
 function showNextLecture() {
   const dayBoxes = document.getElementsByClassName("dayBox");
   const unix_time = new Date();
-  unix_time.setDate( unix_time.getDate() + 1)
+  unix_time.setDate( unix_time.getDate() + 3)
   const dayOfWeek = ['月', '月', '火', '水', '木', '金', '月'][unix_time.getDay()] + "曜日";
 
   for(const dayBox of dayBoxes) {
