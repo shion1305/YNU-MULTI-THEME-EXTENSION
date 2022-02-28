@@ -1,5 +1,5 @@
 {
-    "name": "YNU-LMS Dark-Mode",
+    "name": "YNU-NEW-LMS-EXTENSION",
     "manifest_version": 3,
     "version": "1.0.1",
     "description": "This extension change YNU-LMS's theme to dark",
@@ -21,10 +21,10 @@
         },
         {
             "matches": [
-                "https://lms.ynu.ac.jp/lms/homeHoml/",
+                "https://lms.ynu.ac.jp/lms/homeHoml/*",
                 "https://lms.ynu.ac.jp/lms/infrInfr/back"
             ],
-            "css": ["css/style.css"],
+            "css": ["css/homeHoml.css"],
             "js": ["js/main.js"]
         },
         {
