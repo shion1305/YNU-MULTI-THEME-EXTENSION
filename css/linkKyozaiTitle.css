@@ -1,148 +1,334 @@
-#system{
+body {
+  line-height: 1.5;
+  background-color: var(--background) !important;
+  color: #a7a9be;
+}
+body * {
+  background-color: var(--background) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+.base {
+  padding-top: 76px !important;
+}
+
+/* header */
+.headerContents {
+  background-color: transparent !important;
+  padding: 0 !important;
+  height: 85px !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+.header li,
+.header .userAction,
+.userAction * {
+  background-color: transparent !important;
+}
+.header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: #ddd;
+}
+.iconText span {
+  vertical-align: baseline !important;
+}
+.titleLogo {
+  background-color: transparent !important;
+  padding: 12px 0 !important;
+}
+.flex {
+  background-color: transparent !important;
+  display: flex;
+  align-items: flex-end;
+}
+.flex * {
+  background-color: transparent !important;
+}
+.flex h1 {
+  margin-right: 10px;
+  color: var(--text);
+  font-weight: bold;
+}
+.primary {
+  color: var(--primary) !important;
+}
+.flex h4,
+.newsTitle,
+.courseCardName,
+#homehomlInfo a,
+.userAction ul li a,
+#langchange,
+.textoverflow {
+  color: var(--text) !important;
+}
+.courseMenu {
   display: none !important;
 }
-*{
-  background-color:	rgb(53,57,65) !important;
-  color:#fff !important;
-  font-family: 'Sawarabi Gothic', sans-serif !important;
-  border-color: rgba(255,255,255,0.1) !important;
-  border-width: 2px !important;
+.breadCrumbBar {
+  background-color: transparent !important;
+  position: relative;
+  height: 37px !important;
+  box-sizing: border-box;
+  padding: 8px 16px !important;
 }
-#test{
+.breadCrumb li:nth-last-child(n + 2),
+.breadCrumb li:nth-last-child(n + 2) a span,
+.breadCrumb li:nth-last-child(n + 2) a p {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+.breadCrumb li img {
+  display: none !important;
+}
+.breadCrumb li:before {
+  border-left-color: var(--background) !important;
+}
+.breadCrumb li:after {
+  border-left-color: var(--primary) !important;
+}
+.breadCrumb .current,
+.breadCrumb .textoverflow {
+  background-color: transparent !important;
+}
+.breadCrumb .textoverflow {
+  height: 100% !important;
+}
+.courseControls {
+  padding: 0 !important;
+  background-color: transparent !important;
+  margin-bottom: 2px !important;
+}
+.courseControls .cpButton {
+  height: 20px !important;
+  line-height: 20px !important;
+  font-size: 12px !important;
+  background-color: transparent !important;
+  border-color: var(--text) !important;
+}
+#langList .current a {
+  background-color: var(--background) !important;
+  line-height: 3.3;
+}
+#langList .noCurrent a {
+  line-height: 3.3;
+  background-color: var(--background) !important;
+}
+#langList .current:hover a,
+#langList .noCurrent:hover a {
+  background-color: var(--secondary) !important;
+}
+#addKojinComment {
+  height: 50px !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+#addKojinComment li {
+  height: 40px;
+  background-color: var(--background) !important;
+}
+#addKojinComment li:hover {
+  background-color: var(--secondary) !important;
+}
+#addKojinComment li:nth-child(2) {
+  border-bottom: 1px solid var(--border);
+}
+#addKojinComment li button {
+  width: 100% !important;
+  padding: 10px !important;
+  border: none !important;
+  cursor: pointer;
+}
+#addKojinComment a {
+  line-height: 3.3;
+}
+#addKojinComment .spanText {
+  margin: 0 !important;
+}
+
+/* メイン */
+.courseSearchSubmitButton a {
+  border-color: var(--primary) !important;
+  border-width: 1px !important;
+}
+.courseSearchSubmitButton a span,
+.courseSearchSubmitButton a span2,
+.courseSearchSubmitButton a span3 {
+  color: var(--primary) !important;
+}
+#enq,
+.nonBdr img,
+#repo,
+#mat,
+#test,
+#info,
+#dis,
+#tpic {
+  display: none !important;
+}
+#cs_fullHeadVox {
+  height: 35px !important;
+}
+div#matRef p {
   background-image: none !important;
 }
-#stage{
-  /* 外枠を消去 */
-  border-left:none !important;
-  border-right: none !important;
+
+textarea {
+  outline: none;
 }
-#system{
-  display: none !important;
+.cs_flRight input {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
 }
-#cs_loginInfo{
-  padding: 20px 0 !important;
+.addMessBox p,
+#cs_centerinVox .box01 {
   border: none !important;
 }
-#cs_loginInfo_left{
-  margin-left: 20px !important;
-}
-#home{
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-  border: none !important;
-  pointer-events: none;
-  transition: .3s;
-}
-#home a{
-  text-decoration: none !important;
-  pointer-events: auto;
-}
-#cs_fullHeadVox{
-  margin-bottom: 15px !important;
-  height:39px !important;
-}
-#cs_fullHeadTitle{
-  height:100% !important;
-}
-#repo{
-  background-image: none !important;
-  padding: 5px 0 4px 10px !important;
-}
-.menu_out,.menu_out2{
-  padding:7px 0 !important;
-}
-.menu_out img,.menu_out2 img{
-  display: none;
-}
-.menu_out a,.menu_out2 a{
-  border: 1.5px solid rgba(255,255,255,0.1);
-  border-radius: 5px;
-  background-image: none !important;
-  padding:5px 20px !important;
-  transition: .5s !important;
-}
-.menu_out a:hover,.menu_out2 a:hover{
-  background-color: rgb(74,77,84) !important;
-}
-#mat{
-  background-image: none !important;
-  padding-left: 0 !important;
-}
-#cs_fullHeadLeft{
-  display: none !important;
-}
-#matRef{
-  display: none !important;
-}
-#cs_fullHeadTitle div a img{
-  display: none !important;
-}
-#home:hover{
-  background-color: rgb(74,77,84) !important;
-}
-#main{
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-  margin:0 20px !important;
-  padding: 20px !important;
-}
-.cs_h301{
-  border-left: none !important;
-  background-color: #12172a !important;
-  padding: 15px !important;
-  border-radius: 5px;
-}
-.courseTable3 td, .courseTable3 th{
-  border-bottom:none !important;
-}
-.courseTable3 td:nth-last-child(1) a{
-  pointer-events: none !important;
-  text-decoration: none;
-}
-.box01{
-  border:none !important;
-}
-.box02 img{
-  display: none !important;
-}
-.ifrVoxHead{
-  display: none !important;
-}
-#sansyo #cs_headerIfr{
+/* 学習実績 */
+.cs_search {
   background-image: none !important;
 }
-.nonBdr img{
-  display:none !important;
+/* 利用仮登録 */
+div#cs_tab_area li {
+  background-image: none !important;
 }
-strong{
-  display: none !important;
+div#cs_tab_area li.tab_active {
+  background-image: none !important;
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
 }
-.cs_table3b td #makeFile0 button{
-  border: 1.5px solid rgba(255,255,255,0.1);
-  width: 300px !important;
-  padding:5px 20px !important;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color:	rgb(53,57,65) !important;
+div.cs_frVoxPage li#next,
+div.cs_frVoxPage li#prev {
+  background-image: none !important;
 }
-#addButton{
-  padding:5px 20px !important;
-  border-radius: 5px;
-  cursor: pointer;
-}
-textarea{
-  border:none !important;
-}
-textarea:focus{
-  outline: none !important;
-}
-.ui-resizable-handle{
-  border:none !important;
-}
-/* フッター */
-#footer{
+.cs_table2 img {
   display: none !important;
 }
 
-/* テスト */
-.testControlCenter{
-  background-image: none !important;
+/* themeModal */
+#modalDiv {
+  background-color: var(--background) !important;
+  width: 80vw;
+  max-height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10000;
+  transition: 0.5s;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+#modalDiv h2 {
+  margin: 25px 0 5px 0;
+  font-size: 1.3em;
+}
+#overlay {
+  background-color: transparent !important;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: 0.5s;
+}
+.closed {
+  opacity: 0;
+  top: -100% !important;
+}
+#originalThemeDiv {
+  width: 80%;
+  margin: 0 auto;
+}
+#originalThemeInputs,
+#fontButtonDiv,
+#themeButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.themeButton,
+.fontButton,
+#originalThemeInputs input {
+  width: 24%;
+  margin: 3px 0.5%;
+  height: 35px;
+  background-color: var(--secondary) !important;
+  color: var(--text) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: bold;
+}
+.fontButton {
+  width: 49%;
+}
+.themeButton:hover,
+.fontButton:hover {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+#originalThemeInputs div {
+  width: 50%;
+  height: 35px;
+  display: flex;
+}
+#originalThemeInputs label {
+  display: block;
+  width: 30%;
+  height: 100%;
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+#originalThemeInputs input {
+  padding: 0 15px;
+  margin: 0;
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent !important;
+  color: var(--text) !important;
+  outline: none;
+  border-radius: 0;
+  cursor: auto;
+  text-align: center;
+  transition: 0.5s;
+}
+#primaryInput {
+  border-color: var(--primary) !important;
+}
+#secondaryInput {
+  border-color: var(--secondary) !important;
+}
+#backgroundInput {
+  border-color: var(--background) !important;
+}
+#textInput {
+  border-color: var(--text) !important;
+}
+#borderInput {
+  border-color: var(--border) !important;
+}
+#primaryTextInput {
+  border-color: var(--primaryText) !important;
+}
+#originalThemeDiv button {
+  padding: 8px 15px;
+  margin-top: 20px;
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#originalThemeDiv button:hover {
+  opacity: 0.6;
 }

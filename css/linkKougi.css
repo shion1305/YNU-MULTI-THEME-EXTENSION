@@ -1,197 +1,408 @@
-*{
-  background-color:	rgb(53,57,65) !important;
-  color:#fff !important;
-  font-family: 'Sawarabi Gothic', sans-serif !important;
+body {
+  line-height: 1.5;
+  background-color: var(--background) !important;
 }
-#stage{
-  /* 外枠を消去 */
-  border-left:none !important;
-  border-right: none !important;
+body * {
+  background-color: var(--background) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
 }
-#system{
+.base {
+  padding-top: 76px !important;
+}
+
+/* header */
+.headerContents {
+  background-color: transparent !important;
+  padding: 0 !important;
+  height: 85px !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+.header li,
+.header .userAction,
+.userAction * {
+  background-color: transparent !important;
+}
+.header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: #ddd;
+}
+.iconText span {
+  vertical-align: baseline !important;
+}
+.titleLogo {
+  background-color: transparent !important;
+  padding: 12px 0 !important;
+}
+.flex {
+  background-color: transparent !important;
+  display: flex;
+  align-items: flex-end;
+}
+.flex * {
+  background-color: transparent !important;
+}
+.flex h1 {
+  margin-right: 10px;
+  color: var(--text);
+  font-weight: bold;
+}
+.primary {
+  color: var(--primary) !important;
+}
+.flex h4,
+.newsTitle,
+.courseCardName,
+#homehomlInfo a,
+.userAction ul li a,
+#langchange,
+.textoverflow {
+  color: var(--text) !important;
+}
+.courseMenu {
   display: none !important;
 }
-#cs_loginInfo{
-  padding: 20px 0 !important;
+.breadCrumbBar {
+  background-color: transparent !important;
+  position: relative;
+  height: 37px !important;
+  box-sizing: border-box;
+  padding: 8px 16px !important;
+}
+.breadCrumb li {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+.breadCrumb li:nth-last-child(n + 2),
+.breadCrumb li:nth-last-child(n + 2) a span,
+.breadCrumb li:nth-last-child(n + 2) a p {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+.breadCrumb li img {
+  display: none !important;
+}
+.breadCrumb li:before {
+  border-left-color: var(--background) !important;
+}
+.breadCrumb li:after {
+  border-left-color: var(--primary) !important;
+}
+.breadCrumb .current,
+.breadCrumb .textoverflow {
+  background-color: transparent !important;
+  height: 100% !important;
+}
+.courseControls {
+  padding: 0 !important;
+  background-color: transparent !important;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.courseControls .cpButton {
+  height: 30px !important;
+  line-height: 20px !important;
+  font-size: 12px !important;
+  background-color: var(--primary) !important;
+  border-color: var(--border) !important;
+  color: var(--primaryText) !important;
+}
+#langList .current a {
+  background-color: var(--background) !important;
+  line-height: 3.3;
+}
+#langList .noCurrent a {
+  line-height: 3.3;
+  background-color: var(--background) !important;
+}
+#langList .current:hover a,
+#langList .noCurrent:hover a {
+  background-color: var(--secondary) !important;
+}
+#addKojinComment {
+  background-color: var(--background) !important;
+}
+#addKojinComment li {
+  height: 40px;
+  background-color: var(--background) !important;
+}
+#addKojinComment li:nth-child(2) {
+  border-bottom: 1px solid var(--border);
+}
+#addKojinComment li:hover {
+  background-color: var(--secondary) !important;
+}
+#addKojinComment li button {
+  width: 100% !important;
+  padding: 10px !important;
   border: none !important;
+  cursor: pointer;
 }
-#cs_loginInfo_left{
-  margin-left: 20px !important;
+#addKojinComment a {
+  line-height: 3.3;
 }
-#home{
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-  border: none !important;
-  pointer-events: none;
-  transition: .3s;
+#addKojinComment .spanText {
+  margin: 0 !important;
 }
-#home a{
-  text-decoration: none !important;
-  pointer-events: auto;
+/* class table */
+#cs_tab_area2 .tab_active {
+  background-color: var(--secondary) !important;
 }
-#home:hover{
-  background-color: rgb(74,77,84) !important;
+#cs_tab_area2 li img {
+  display: none !important;
 }
-#cs_top_faseVox{
+.tab_active,
+.current_cors {
+  background-image: none !important;
+  background-color: var(--secondary) !important;
+}
+#cs_tab_area li {
+  background-image: none !important;
+}
+.subKyozaititleCell {
   display: none;
 }
-#cs_tab_area{
+.kyozaititleCell {
+  width: 67.685% !important;
+  position: relative !important;
+  transition: 0.1s;
+}
+.kyozaititleCell span,
+.kyozaititleCell br {
   display: none !important;
 }
-#main_bk{
-  margin-left: 260px !important;
+.kyozaititleCell a {
+  background-color: transparent !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  display: table-cell !important;
+  vertical-align: middle !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box;
+  padding: 16px 0;
+  padding-left: 70px !important;
+  transition: 0.1s;
+  text-decoration: none !important;
 }
-#main{
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
+.tableFixedSet table tr:nth-child(n + 2) .kyozaititleCell:hover {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
 }
-#cs_rightVox{
-  border: none !important;
+.tableFixedSet table tr:nth-child(n + 2) .kyozaititleCell:hover a {
+  color: var(--primaryText) !important;
 }
-.cs_hideVox{
-  margin-bottom: 0px !important;
-  border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
+#cs_rightVox .materialLabe {
+  position: relative;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 13px;
+  box-sizing: border-box;
 }
-.cs_hideVox a{
-  padding: 10px 0 !important;
+#cs_rightVox .materialLabe a {
+  position: absolute;
+  display: block !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 13px 0 !important;
+  text-align: center !important;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  transition: 0.1s;
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
 }
-.cs_hideVox_left input{
-  width: 24px !important;
-  border:2px solid rgba(255, 255, 255, 0.3) !important;
-  margin-top:9px !important;
-}
-.cs_hideVox_right{
-  padding:10px !important;
-}
-.courseTable1 tr{
-  padding-left: 10px !important;
-}
-.courseTable1 td{
-  border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
-}
-.td01{
-  padding-left: 20px !important;
-}
-.td01 img{
-  display: none !important;
-}
-.courseTable1{
-  margin-bottom:0 !important;
-}
-.messageArea{
-  margin:5px 0 !important;
-}
-.messageArea p{
-  background: none !important;
-  padding-left: 5px 0  5px 3px !important;
-}
-.courseTable1 tbody tr td,.courseTable1 tbody tr td a{
-  pointer-events: none !important;
-  transition: .3s !important;
-}
-.courseTable1 tbody tr td a{
-  pointer-events: auto !important;
-  text-decoration: none;
-}
-.courseTable1 tbody tr:hover td{
-  background-color: rgb(74,77,84) !important;
-  border-bottom:1.5px solid rgba(255, 255, 255, 0) !important;
-}
-.courseTable1 tbody tr:hover a{
-  background-color: rgb(74,77,84) !important;
-}
-td span{
-  background-image: none !important;
-}
-.cs_taOpen{
-  background-color: #fff !important;
-  color: #353941 !important;
-}
-.cs_taextend{
-  background-color: #f85d65 !important;
-}
-.state-background{
-  display: inline-block;
-  width: 65px !important;
-  padding: 0.5em 0;
-  font-size: .8em;
-  transition: .5s;
-  pointer-events: none;
-  text-shadow: 0 0 10px #555;
-}
-.state-background:hover{
+#cs_rightVox .materialLabe a:hover {
   opacity: 0.7;
 }
-.state-background:hover .link{
-  background-color: #28c3b2 !important;
+/* side bar */
+.menuColumn {
+  padding-top: 16px !important;
 }
-.yet{
-  background-color: #f85d65 !important;
-}
-.already{
-  background-color: #28c3b2 !important;
-}
-.unwatched{
-  background-color: #f5ae02 !important;
-}
-.link{
-  pointer-events: auto;
-}
-/* お知らせ欄 */
-#side_menu{
-  margin:0 20px !important;
-  padding:10px !important;
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2) !important;
-}
-#side_menu ul .label{
-  background-image: none !important;
-  background-color: #12172a !important;
-  border-radius:5px;
-  font-size: 80%;
-  padding: 7px 7px 7px 16px !important;
-}
-#side_menu li{
-  border:none !important;
-}
-#side_menu #M0028,#side_menu #M0029,#side_menu #M0039,#side_menu #M0041{
-  border-bottom:1.5px solid rgba(255, 255, 255, 0.1) !important;
-}
-#side_menu a{
-  padding:5px 0 5px 16px !important;
-  transition: .3s;
-}
-#side_menu a:hover{
-  background-color: rgb(74,77,84) !important;
-}
-.top{
-  display:none !important;
-}
-/* フッター */
-#footer{
+.menuColumn .accordionHeader {
   display: none !important;
+}
+.menuColumn .accordionContents li {
+  padding: 0 !important;
+}
+.menuColumn .accordionContents a {
+  padding-left: 24px !important;
+  padding-right: 0 !important;
+}
+.menuColumn > ul > li:nth-child(2) {
+  display: none !important;
+}
+.accordionContents .current a {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+.accordionContents li:not(.current) a {
+  transition: 0.1s;
+}
+.accordionContents li:not(.current) a:hover {
+  background-color: var(--secondary) !important;
+}
+/* delete icon */
+.accordionFolderIcon,
+.allOpenIcon,
+.kyozaititleCell img {
+  display: none !important;
+}
+
+/* 講義概要 */
+h3.cs_h301,
+h3.cs_h302 {
+  border-color: var(--primary) !important;
+}
+.cs_table3a {
+  border-color: var(--border) !important;
 }
 
 /* 成績参照 */
-#rating_block td, #rating_block th{
-  border:1.5px solid rgba(255, 255, 255, 0.1) !important;
-}
-#list_form td img{
+.cs_table2 img {
   display: none;
 }
-#list_form td, #list_form th{
-  border:1.5px solid rgba(255, 255, 255, 0.1) !important;
+canvas {
+  background: none !important;
 }
-
-/* シラバス */
-.cs_h301{
-  border: none !important;
+/* よくある質問 */
+#faq {
+  display: none !important;
 }
-.yellow{
-  border: none !important;
+/* themeModal */
+#modalDiv {
+  background-color: var(--background) !important;
+  width: 80vw;
+  max-height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10000;
+  transition: 0.5s;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
 }
-.cs_h301 + table td, .cs_h301 + table th{
-  border:1.5px solid rgba(255, 255, 255, 0.1) !important;
+#modalDiv h2 {
+  margin: 25px 0 5px 0;
+  font-size: 1.3em;
 }
-
-/* 掲示板 */
-.box04 img{
-  display: none;
+#overlay {
+  background-color: transparent !important;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: 0.5s;
+}
+.closed {
+  opacity: 0;
+  top: -100% !important;
+  width: 100px !important;
+}
+#originalThemeDiv {
+  width: 80%;
+  margin: 0 auto;
+}
+#originalThemeInputs,
+#fontButtonDiv,
+#themeButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.themeButton,
+.fontButton,
+#originalThemeInputs input {
+  width: 24%;
+  margin: 3px 0.5%;
+  height: 35px;
+  background-color: var(--secondary) !important;
+  color: var(--text) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: bold;
+}
+.fontButton {
+  width: 49%;
+}
+.themeButton:hover,
+.fontButton:hover {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+#originalThemeInputs div {
+  width: 50%;
+  height: 35px;
+  display: flex;
+}
+#originalThemeInputs label {
+  display: block;
+  width: 30%;
+  height: 100%;
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+#originalThemeInputs input {
+  padding: 0 15px;
+  margin: 0;
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent !important;
+  color: var(--text) !important;
+  outline: none;
+  border-radius: 0;
+  cursor: auto;
+  text-align: center;
+  transition: 0.5s;
+}
+#primaryInput {
+  border-color: var(--primary) !important;
+}
+#secondaryInput {
+  border-color: var(--secondary) !important;
+}
+#backgroundInput {
+  border-color: var(--background) !important;
+}
+#textInput {
+  border-color: var(--text) !important;
+}
+#borderInput {
+  border-color: var(--border) !important;
+}
+#primaryTextInput {
+  border-color: var(--primaryText) !important;
+}
+#originalThemeDiv button {
+  padding: 8px 15px;
+  margin-top: 20px;
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#originalThemeDiv button:hover {
+  opacity: 0.6;
 }

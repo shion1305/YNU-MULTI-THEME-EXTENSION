@@ -70,3 +70,22 @@ div#addMess4 p {
 .cs_Bt {
   border: 1px solid var(--border) !important;
 }
+.cpPopup,
+.topic {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+.cpPopupHeader {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+input {
+  background-color: var(--secondary) !important;
+  outline: none;
+  padding: 10px !important;
+  border-radius: 5px;
+}
+.cpButton,
+.cpButton span {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}

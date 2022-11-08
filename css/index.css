@@ -1,0 +1,401 @@
+body {
+  line-height: 1.5;
+  background-color: var(--background);
+}
+.headerContents {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* toOldLms */
+.header li,
+.header .userAction {
+  background-color: none !important;
+}
+
+.header {
+  background: transparent !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+.header * {
+  border-color: var(--border) !important;
+}
+.titleLogo {
+  padding: 12px 0 !important;
+}
+#langchange {
+  padding: 6px 0 !important;
+}
+#langList .current a {
+  background-color: var(--background) !important;
+  line-height: 3.3;
+}
+#langList .noCurrent a {
+  line-height: 3.3;
+  background-color: var(--background) !important;
+}
+#langList .current:hover a,
+#langList .noCurrent:hover a {
+  background-color: var(--secondary) !important;
+}
+#addKojinComment {
+  height: 50px !important;
+  background-color: var(--background) !important;
+  box-shadow: none !important;
+}
+#addKojinComment li {
+  background-color: var(--background) !important;
+}
+#addKojinComment li:nth-child(2) {
+  border-bottom: 1px solid var(--border);
+}
+#addKojinComment li:hover {
+  background-color: var(--secondary) !important;
+}
+#addKojinComment li button {
+  width: 100% !important;
+  padding: 10px !important;
+  border: none !important;
+  background-color: transparent !important;
+  color: var(--text) !important;
+  cursor: pointer;
+}
+#addKojinComment a {
+  line-height: 3.3 !important;
+}
+.menuColumn {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 5px;
+}
+.homeProfHeader {
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+  z-index: 100;
+  margin-bottom: 10px;
+}
+.newsArea {
+  display: flex !important;
+  flex-direction: column;
+  box-sizing: border-box !important;
+  width: 92% !important;
+}
+.newsBlock {
+  border: none !important;
+  margin-bottom: 10px;
+}
+.newsSubO img {
+  display: none !important;
+}
+.accordionMark::before {
+  display: none !important;
+}
+.courseSearchBar {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.classTable {
+  white-space: nowrap;
+  width: 100%;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.classTable tr {
+  position: relative;
+  transition: 0.1s;
+}
+.classTable tr a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100% !important;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.classTable tr:nth-child(2n) {
+  background-color: rgb(228, 247, 254);
+}
+.classTable tr:hover {
+  background-color: rgb(208, 227, 254);
+}
+.classTable th {
+  text-align: center;
+  border-right: 1px solid #252525;
+  border-bottom: 1px solid #252525;
+  padding: 0 15px;
+  pointer-events: none;
+  z-index: 100;
+  background-color: white;
+}
+.classTable td {
+  padding: 12px;
+  text-align: center;
+  transition: 0.1s;
+}
+.classTable .classNameTd {
+  position: relative;
+  text-align: left;
+  padding-left: 30px;
+}
+#footer {
+  border: none !important;
+}
+/* delete icon */
+.iconText img,
+.study span img,
+.last_login_date span img,
+.newsSubO img,
+.courseCardRole {
+  display: none;
+}
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* changeTheme */
+
+/* background */
+.contentsColumn,
+.newsArea,
+.cpMargin,
+#homeHomlForm,
+.study,
+.homeProfContents,
+.homeProfContents *,
+.menuColumn,
+.classTable th {
+  background-color: var(--background) !important;
+  color: var(--text) !important;
+  transition: 0.1s !important;
+}
+.contentsColumn {
+  border: none !important;
+}
+/* secondary color */
+.newsBlock,
+.courseCardInfo,
+.classTable tr:nth-child(2n),
+#cs_headerIfr {
+  background-color: var(--secondary) !important;
+  color: var(--text) !important;
+  border-color: var(--background) !important;
+  transition: 0.1s !important;
+}
+.newsBlock * {
+  background-color: var(--secondary) !important;
+}
+.cpFormTable {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+.cpFormTable th {
+  background-color: var(--secondary) !important;
+}
+/* primary color */
+.homeProfHeader,
+.homeProfHeader table,
+.homeProfHeader table *,
+.csbStr,
+.csbSearch,
+.csbList,
+.cpLabel.orange:before,
+.accordionMark span {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+  font-weight: bold;
+  transition: 0.1s !important;
+}
+.primary {
+  color: var(--primary);
+}
+.courseSearchSubmitButton .cpButton {
+  line-height: 22px !important;
+}
+.courseSearchSubmitButton .cpButton,
+.courseSearchSubmitButton .cpButton span,
+.courseSearchSubmitButton .highlight {
+  color: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+  background-color: var(--background) !important;
+}
+.courseSearchSubmitButton .cpButton span {
+  border: none !important;
+}
+.iconText span {
+  vertical-align: baseline !important;
+}
+.flex {
+  display: flex;
+  align-items: flex-end;
+}
+.flex h1 {
+  margin-right: 10px;
+  color: var(--text);
+  font-weight: bold;
+}
+.flex h2,
+.newsTitle,
+.courseCardName,
+#homehomlInfo a,
+.userAction ul li a,
+#langchange {
+  color: var(--text) !important;
+}
+.classTable a {
+  background-color: transparent !important;
+}
+/* delete border */
+.cpLabel,
+.menuColumn {
+  border: none !important;
+}
+.classTable th,
+.border-bottom {
+  border-color: var(--border) !important;
+}
+.csbSearch {
+  border-left: 4px solid var(--background) !important;
+}
+.classTable tr:hover {
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+}
+.last_login_date {
+  text-align: center !important;
+}
+
+/* themeModal */
+#modalDiv {
+  background-color: var(--background);
+  width: 80vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10000;
+  transition: 0.5s;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+@media (max-height: 750px) {
+  #modalDiv {
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+#modalDiv * {
+  color: var(--text);
+}
+#modalDiv h2 {
+  margin: 25px 0 5px 0;
+  font-size: 1.3em;
+}
+#overlay {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: 0.5s;
+}
+.closed {
+  opacity: 0;
+  top: -100% !important;
+}
+#originalThemeDiv {
+  width: 80%;
+  margin: 0 auto;
+}
+#originalThemeInputs,
+#fontButtonDiv,
+#themeButtonDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.themeButton,
+.fontButton,
+#originalThemeInputs input {
+  width: 24%;
+  margin: 3px 0.5%;
+  height: 35px;
+  background-color: var(--secondary);
+  color: var(--text) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: bold;
+}
+.fontButton {
+  width: 49%;
+}
+.themeButton:hover,
+.fontButton:hover {
+  background-color: var(--primary);
+  color: var(--primaryText) !important;
+}
+#originalThemeInputs div {
+  width: 50%;
+  height: 35px;
+  display: flex;
+}
+#originalThemeInputs label {
+  display: block;
+  width: 30%;
+  height: 100%;
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+#originalThemeInputs input {
+  padding: 0 15px;
+  margin: 0;
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent !important;
+  color: var(--text) !important;
+  outline: none;
+  border-radius: 0;
+  cursor: auto;
+  text-align: center;
+  transition: 0.5s;
+}
+#primaryInput {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+}
+#secondaryInput {
+  border-color: var(--secondary) !important;
+}
+#backgroundInput {
+  border-color: var(--background) !important;
+}
+#textInput {
+  border-color: var(--text) !important;
+}
+#borderInput {
+  border-color: var(--border) !important;
+}
+#primaryTextInput {
+  border-color: var(--primaryText) !important;
+}
+
+#originalThemeDiv button {
+  padding: 8px 15px;
+  margin-top: 20px;
+  background-color: var(--primary) !important;
+  color: var(--primaryText) !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#originalThemeDiv button:hover {
+  opacity: 0.6;
+}
