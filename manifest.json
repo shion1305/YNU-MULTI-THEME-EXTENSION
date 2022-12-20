@@ -1,7 +1,7 @@
 {
   "name": "LMS_MULTI_THEME_EXTENSION",
   "manifest_version": 3,
-  "version": "1.1.10",
+  "version": "1.1.12",
   "description": "横浜国立大学の授業支援システムの配色を自由に設定することができる拡張機能です。",
   "host_permissions": ["https://lms.ynu.ac.jp/lms/homeHoml/"],
   "content_scripts": [
@@ -56,6 +56,7 @@
         "https://lms.ynu.ac.jp/lms/srcsSrcl/doIndex;*",
         "https://lms.ynu.ac.jp/lms/quetResl/doReturnAction;*",
         "https://lms.ynu.ac.jp/lms/dissEvll/doPreKyozai;*",
+        "https://lms.ynu.ac.jp/lms/rptsRptc/doTempSaveReport;*",
         "https://lms.ynu.ac.jp/lms/quetResl/doReturnAction;*"
       ],
       "css": ["css/linkKougi.css"],
@@ -104,11 +105,11 @@
         "https://lms.ynu.ac.jp/lms/tpicTpic/doPankuzu;*",
         "https://lms.ynu.ac.jp/lms/rptsRptc/doIndex;*",
         "https://lms.ynu.ac.jp/lms/discThrl/doIndex;*",
-        "https://lms.ynu.ac.jp/lms/rptsRptc/doTempSaveReport;*",
         "https://lms.ynu.ac.jp/lms/quesQuec/doGotoQuetResl;*",
         "https://lms.ynu.ac.jp/lms/quesQuec/doJisshiJyokyo;*",
         "https://lms.ynu.ac.jp/lms/dissEvll/doIndex;*",
-        "https://lms.ynu.ac.jp/lms/quesQuec/doGotoQuetResl;*"
+        "https://lms.ynu.ac.jp/lms/quesQuec/doGotoQuetResl;*",
+        "https://lms.ynu.ac.jp/lms/tstsQuee/doLimit;*"
       ],
       "css": ["css/linkKyozaiTitle.css"],
       "js": ["js/main.js"]
