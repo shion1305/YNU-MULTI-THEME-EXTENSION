@@ -109,7 +109,10 @@
         "https://lms.ynu.ac.jp/lms/quesQuec/doJisshiJyokyo;*",
         "https://lms.ynu.ac.jp/lms/dissEvll/doIndex;*",
         "https://lms.ynu.ac.jp/lms/quesQuec/doGotoQuetResl;*",
-        "https://lms.ynu.ac.jp/lms/tstsQuee/doLimit;*"
+        "https://lms.ynu.ac.jp/lms/tstsQuee/doLimit;*",
+        "https://lms.ynu.ac.jp/lms/corsComl/doJisshiJyotaiLink;*",
+        "https://lms.ynu.ac.jp/lms/corsCosl/doJisshiJyotaiLink;*",
+        "https://lms.ynu.ac.jp/lms/corsCosl/doKyozaiTitleLink;*"
       ],
       "css": ["css/linkKyozaiTitle.css"],
       "js": ["js/main.js"]
