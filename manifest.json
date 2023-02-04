@@ -60,7 +60,7 @@
         "https://lms.ynu.ac.jp/lms/quetResl/doReturnAction;*"
       ],
       "css": ["css/linkKougi.css"],
-      "js": ["js/main.js"]
+      "js": ["js/jquery-3.4.1.min.js", "js/main.js", "js/doLinkKougi.js"]
     },
     {
       "matches": [
