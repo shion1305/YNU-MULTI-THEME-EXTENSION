@@ -15,7 +15,11 @@ $(function () {
       url: " https://lms.ynu.ac.jp/lms/infrInal/index;SID=" + s_id,
       data: $(aaa).serialize(),
       success: function (data) {
-        console.log(data);
+        console.log(
+          parser
+            .parseFromString(data, "text/html")
+            .getElementsByClassName("cs_table2")[0]
+        );
         // block.html(data);
         /* Callback */
         if (callback != undefined) {
