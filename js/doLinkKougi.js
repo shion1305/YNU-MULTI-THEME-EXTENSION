@@ -2,13 +2,15 @@ $(function () {
   const BASE_NOTIFY_URL = "https://lms.ynu.ac.jp/lms/infrInfl/doIndex;SID=";
   const s_id = location.href.split("SID=")[1];
   let form = main();
+
   async function main() {
     const rawRes = await fetch(BASE_NOTIFY_URL + s_id);
     const resHtml = await rawRes.text();
     const parser = new DOMParser();
     const infoDocument = parser.parseFromString(resHtml, "text/html");
-    console.log(infoDocument.getElementById("list_form"));
     let aaa = infoDocument.getElementById("list_form");
+    console.log(aaa);
+    if (aaa === null) return
     // return infoDocument.getElementById("list_form");
     $.ajax({
       type: "POST",
