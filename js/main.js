@@ -456,7 +456,7 @@ function createTable(tableInfo) {
         periodTd.classList.add("border-bottom");
       }
       periodTd.innerText =
-        dayOfWeekInfo.periods[i].innerText.split(/春|秋|卒/g)[0];
+        dayOfWeekInfo.periods[i].innerText.split(/春|秋|卒|\n通/g)[0];
       tr.appendChild(periodTd);
 
       let classNameTd = document.createElement("td");
